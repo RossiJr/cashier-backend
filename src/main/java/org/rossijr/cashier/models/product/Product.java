@@ -6,6 +6,7 @@ import org.rossijr.cashier.enums.product.Category;
 import org.rossijr.cashier.models.organization.Organization;
 
 import java.io.Serializable;
+import java.util.Calendar;
 import java.util.UUID;
 
 @Entity
@@ -21,7 +22,7 @@ public class Product implements Serializable {
     @Column(name = "NAME", nullable = false, columnDefinition = "TEXT")
     private String name;
 
-    @Column(name = "DESCRIPTION", nullable = true, columnDefinition = "TEXT")
+    @Column(name = "DESCRIPTION", columnDefinition = "TEXT")
     private String description;
 
     @Enumerated(EnumType.STRING)
@@ -30,6 +31,9 @@ public class Product implements Serializable {
 
     @Column(name = "BARCODE", columnDefinition = "TEXT")
     private String barcode;
+
+    @Column(name = "ADDED_DATE", columnDefinition = "TIMESTAMP")
+    private Calendar addedDate;
 
     @JsonBackReference
     @ManyToOne
@@ -78,6 +82,14 @@ public class Product implements Serializable {
 
     public void setBarcode(String barcode) {
         this.barcode = barcode;
+    }
+
+    public Calendar getAddedDate() {
+        return addedDate;
+    }
+
+    public void setAddedDate(Calendar addedDate) {
+        this.addedDate = addedDate;
     }
 
     public Organization getOrganization() {
