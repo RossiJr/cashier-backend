@@ -1,33 +1,84 @@
-HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
+# IntelliJ IDEA
+.idea/
 *.iws
 *.iml
 *.ipr
+.idea/*
+!*.gitignore
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# IntelliJ IDEA Module
+/modules.xml
+/.idea/modules.xml
+/.idea/*.iml
+/.idea/modules
+/.idea/workspace.xml
+/.idea/tasks.xml
+/.idea/dictionaries
+/.idea/vcs.xml
+/.idea/jsLibraryMappings.xml
 
-### VS Code ###
-.vscode/
+# IntelliJ IDEA Code Styles
+/.idea/codeStyles/Project.xml
+/.idea/codeStyles/codeStyleConfig.xml
+
+# IntelliJ IDEA Sensitive or System Files
+.idea/dataSources/
+.idea/dataSources.ids
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/gradle.xml
+.idea/libraries
+
+# Intellij IDEA configuration
+.idea_modules/
+
+# Sonar
+.idea/sonarlint
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Maven Wrapper
+.mvn/
+mvnw
+mvnw.cmd
+
+# Spring Boot
+spring.log
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+
+# Static and Dynamic Web artifacts
+**/target/
+
+# Class Files
+*.class
+
+# OS Specific
+.DS_Store
+Thumbs.db
+
+# Logs and Databases
+*.log
+*.sql
+*.sqlite
+
+# Temporary files
+*~
+*.swp
+*.swo
+
+# Postgres
+*.pgdata
+.pgdata/
